@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.il8n.resources" value="mess"/>
+	<constant name="struts.il8n.encoding" value="utf-8"/>
+
+    <package name="message" namespace="/" extends="struts-default">
+       <action name="login" class="cn.cslg.wcs.action.LoginAction">
+            <result name="user" type="chain">
+                <param name="actionName">Message</param>
+               </result>
+			<result name="admin">/admin/home.jsp</result>
+			<result name="input">/login.jsp</result>
+        </action>
+        
+       <action name="MessageAdd" class="cn.cslg.wcs.action.MessageAddAction">
+          	<result name="success" type="chain">Message</result>
+          	<result name="error">/error.jsp</result>
+       </action>
+       <action name="Message" class="cn.cslg.wcs.action.MessageAction">
+          	<result name="home1">/user/home.jsp</result>
+          	<result name="home2">/admin/messageManage.jsp</result>
+       </action>
+       <action name="MessageDel" class="cn.cslg.wcs.action.MessageDelAction">
+          	<result name="success"  type="chain">Message</result>
+       </action>
+       <action name="User"  class="cn.cslg.wcs.action.UserAction">
+        	    <result name="success">/admin/userManage.jsp</result> 
+        	</action>
+        	<action name="UserDel"  class="cn.cslg.wcs.action.UserDelAction">
+        	    <result name="success" type="chain">User</result>
+        	    
+        	</action>
+        <action name="register" class="cn.cslg.wcs.action.RegisterAction">
+            <result name="success">/registerSuccess.jsp</result>
+            
+        </action>
+        <action name="logout" class="cn.cslg.wcs.action.LogoutAction">
+            <result name="success" type="redirect">/login.jsp</result>
+            
+        </action>
+        <action name="UserUpdate" class="cn.cslg.wcs.action.UserUpdateAction">
+            <result name="success">user/updateSuccess.jsp</result>
+            
+        </action>
+    </package>
+    
+    
+
+
+    <!-- Add packages here -->
+
+</struts>

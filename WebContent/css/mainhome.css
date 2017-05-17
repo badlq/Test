@@ -1,0 +1,63 @@
+/*
+Credit: #
+*/
+
+body {
+	width:1028px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 17px;
+	line-height: 1.7em; 
+	background-image:url(../imges/background.png); 
+	background-position: top;
+	color:#9F3;
+	float:left;
+	text-align:center;
+	
+	
+}
+h1{
+	text-align:center;
+	color:#3F0;
+}
+.login{
+	width:950px;
+	height:50px;
+	float:left;
+	text-align:left;
+	}
+a{
+	color:#F39;
+	}
+	
+
+.select{
+	text-align:center;
+	width:950px;
+	float:left;
+	
+}
+.mune{	
+	width:100px;
+	text-align:center;
+	margin-left:80px;
+}
+
+.allconts{
+	margin-top:30px;
+	width:850px;
+	height:620px;
+	text-align:left;
+
+}
+.name-ip{
+	margin-left:10px;
+	font-size:13px;
+}
+.conts{
+	margin-left:30px;
+}
+.reply{
+	width:920px;
+	float:left;
+}
+
